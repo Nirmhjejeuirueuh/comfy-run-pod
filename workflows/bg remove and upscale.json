@@ -1,0 +1,450 @@
+{
+  "id": "8fa4c3d7-4424-4ed2-9e04-e98dd23b39ac",
+  "revision": 0,
+  "last_node_id": 22,
+  "last_link_id": 25,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        100,
+        130
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11,
+            22
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "african-american-male-fashion-model-hat-portrait-50038580.webp",
+        "image"
+      ]
+    },
+    {
+      "id": 19,
+      "type": "BRIA_RMBG_ModelLoader_Zho",
+      "pos": [
+        100,
+        762
+      ],
+      "size": [
+        231.0875,
+        26
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "links": [
+            13,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-BRIA_AI-RMBG",
+        "ver": "827fcd63ff0cfa7fbc544b8d2f4c1e3f3012742d",
+        "Node name for S&R": "BRIA_RMBG_ModelLoader_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 11,
+      "type": "BRIA_RMBG_Zho",
+      "pos": [
+        474.080078125,
+        362
+      ],
+      "size": [
+        175.2994140625,
+        46
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "link": 13
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            21
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Background Remover",
+      "properties": {
+        "cnr_id": "ComfyUI-BRIA_AI-RMBG",
+        "ver": "827fcd63ff0cfa7fbc544b8d2f4c1e3f3012742d",
+        "Node name for S&R": "BRIA_RMBG_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 14,
+      "type": "ImageScale",
+      "pos": [
+        847.4921875,
+        390
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 21
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1024,
+        0,
+        "disabled"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "Image Crop Face",
+      "pos": [
+        474.080078125,
+        130
+      ],
+      "size": [
+        273.412109375,
+        102
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 22
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            19
+          ]
+        },
+        {
+          "name": "CROP_DATA",
+          "type": "CROP_DATA",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-ns",
+        "ver": "3.0.1",
+        "Node name for S&R": "Image Crop Face"
+      },
+      "widgets_values": [
+        1,
+        "lbpcascade_animeface.xml"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "PreviewImage",
+      "pos": [
+        1217.4921875,
+        306
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 18
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 16,
+      "type": "ImageScale",
+      "pos": [
+        847.4921875,
+        130
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            23
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1024,
+        1024,
+        "disabled"
+      ]
+    },
+    {
+      "id": 22,
+      "type": "BRIA_RMBG_Zho",
+      "pos": [
+        1217.4921875,
+        130
+      ],
+      "size": [
+        175.2994140625,
+        46
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "link": 25
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 23
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Background Remover",
+      "properties": {
+        "cnr_id": "ComfyUI-BRIA_AI-RMBG",
+        "ver": "827fcd63ff0cfa7fbc544b8d2f4c1e3f3012742d",
+        "Node name for S&R": "BRIA_RMBG_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "PreviewImage",
+      "pos": [
+        1492.7916015625,
+        130
+      ],
+      "size": [
+        140,
+        246.00000000000003
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 24
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    }
+  ],
+  "links": [
+    [
+      11,
+      10,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      13,
+      19,
+      0,
+      11,
+      0,
+      "RMBGMODEL"
+    ],
+    [
+      18,
+      14,
+      0,
+      21,
+      0,
+      "IMAGE"
+    ],
+    [
+      19,
+      12,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      11,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      10,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      16,
+      0,
+      22,
+      1,
+      "IMAGE"
+    ],
+    [
+      24,
+      22,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      25,
+      19,
+      0,
+      22,
+      0,
+      "RMBGMODEL"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.9090909090909091,
+      "offset": [
+        63.043444137576785,
+        64.44799139741053
+      ]
+    },
+    "frontendVersion": "1.28.7"
+  },
+  "version": 0.4
+}
