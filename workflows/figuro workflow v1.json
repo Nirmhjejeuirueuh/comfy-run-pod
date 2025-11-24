@@ -1,0 +1,513 @@
+{
+  "id": "8fa4c3d7-4424-4ed2-9e04-e98dd23b39ac",
+  "revision": 0,
+  "last_node_id": 26,
+  "last_link_id": 36,
+  "nodes": [
+    {
+      "id": 14,
+      "type": "ImageScale",
+      "pos": [
+        727.1635668646295,
+        390
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            28
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "ImageScale"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1024,
+        0,
+        "disabled"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "BRIA_RMBG_Zho",
+      "pos": [
+        1720.1575499740738,
+        283.3500000000002
+      ],
+      "size": [
+        175.2994140625,
+        46
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "link": 13
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 30
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Background Remover",
+      "properties": {
+        "cnr_id": "ComfyUI-BRIA_AI-RMBG",
+        "ver": "827fcd63ff0cfa7fbc544b8d2f4c1e3f3012742d",
+        "Node name for S&R": "BRIA_RMBG_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 19,
+      "type": "BRIA_RMBG_ModelLoader_Zho",
+      "pos": [
+        1493.0911499999977,
+        452.78208000000035
+      ],
+      "size": [
+        231.0875,
+        26
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "links": [
+            13,
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "ComfyUI-BRIA_AI-RMBG",
+        "ver": "827fcd63ff0cfa7fbc544b8d2f4c1e3f3012742d",
+        "Node name for S&R": "BRIA_RMBG_ModelLoader_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 20,
+      "type": "PreviewImage",
+      "pos": [
+        2099.214372151204,
+        429.43023000000017
+      ],
+      "size": [
+        140,
+        246.00000000000006
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 31
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 22,
+      "type": "BRIA_RMBG_Zho",
+      "pos": [
+        2243.8445165210196,
+        161.43459000000053
+      ],
+      "size": [
+        175.2994140625,
+        46
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "rmbgmodel",
+          "type": "RMBGMODEL",
+          "link": 25
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 32
+        }
+      ],
+      "outputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": [
+            33
+          ]
+        },
+        {
+          "name": "mask",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "title": "Background Remover",
+      "properties": {
+        "cnr_id": "ComfyUI-BRIA_AI-RMBG",
+        "ver": "827fcd63ff0cfa7fbc544b8d2f4c1e3f3012742d",
+        "Node name for S&R": "BRIA_RMBG_Zho"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 24,
+      "type": "PreviewImage",
+      "pos": [
+        2480.1419249533346,
+        182.45238709312983
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 33
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 25,
+      "type": "PreviewImage",
+      "pos": [
+        1723.1795530851778,
+        -84.05196938059682
+      ],
+      "size": [
+        140,
+        246
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 36
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 10,
+      "type": "LoadImage",
+      "pos": [
+        389.42349436981465,
+        272.7799999999999
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            34
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.65",
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "Whisk_f2682fad74.jpg",
+        "image"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "Image Crop Face",
+      "pos": [
+        1888.8135384063887,
+        108.21999999999991
+      ],
+      "size": [
+        273.412109375,
+        102
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            32
+          ]
+        },
+        {
+          "name": "CROP_DATA",
+          "type": "CROP_DATA",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "was-ns",
+        "ver": "3.0.1",
+        "Node name for S&R": "Image Crop Face"
+      },
+      "widgets_values": [
+        1,
+        "haarcascade_frontalface_default.xml"
+      ]
+    },
+    {
+      "id": 26,
+      "type": "Note",
+      "pos": [
+        927.5052258124517,
+        574.1916578921299
+      ],
+      "size": [
+        846.3636363636363,
+        247.27272727272725
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "pixar prompt: Create a stylized Pixar-inspired 3D character of the person in the uploaded image. \n        Keep the face recognizable and similar to the photo, with expressive eyes, cinematic soft lighting, and smooth textures. \n        Preserve hairstyle and outfit details while adapting to Pixar's semi-realistic proportions and charm.\n\nrealistic prompt: Generate a realistic 3D figurine version of the person exactly as in the photo, with lifelike materials and accurate textures. \n        Maintain realism, balanced proportions, and skin tone consistency. \n        No background, no base or stand.\n\ncute chibi prompt:  Create a 3D cartoon collectible figurine of the person (or couple) in the uploaded image. \n        Keep faces recognizable but stylized with oversized heads, big glossy expressive eyes, and simplified toy-like body proportions. \n        Preserve hairstyles and facial features in a cute figurine style. \n        Outfits should match the uploaded photo while fitting the Nendoroid aesthetic. \n        Use a soft, playful pastel palette and glossy plastic-like surface finish."
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 23,
+      "type": "OpenAI Image API",
+      "pos": [
+        1259.159555604259,
+        69.87300860258972
+      ],
+      "size": [
+        400,
+        200
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 28
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            29,
+            30,
+            36
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy_openai_image_api",
+        "ver": "0.0.4",
+        "Node name for S&R": "OpenAI Image API"
+      },
+      "widgets_values": [
+        " Generate a realistic 3D figurine version of the person exactly as in the photo, with lifelike materials and accurate textures. \n        Maintain realism, balanced proportions, and skin tone consistency. \n        No background, no base or stand.",
+        "",
+        "gpt-image-1",
+        "1024x1536",
+        "low"
+      ]
+    }
+  ],
+  "links": [
+    [
+      13,
+      19,
+      0,
+      11,
+      0,
+      "RMBGMODEL"
+    ],
+    [
+      25,
+      19,
+      0,
+      22,
+      0,
+      "RMBGMODEL"
+    ],
+    [
+      28,
+      14,
+      0,
+      23,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      23,
+      0,
+      12,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      23,
+      0,
+      11,
+      1,
+      "IMAGE"
+    ],
+    [
+      31,
+      11,
+      0,
+      20,
+      0,
+      "IMAGE"
+    ],
+    [
+      32,
+      12,
+      0,
+      22,
+      1,
+      "IMAGE"
+    ],
+    [
+      33,
+      22,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      34,
+      10,
+      0,
+      14,
+      0,
+      "IMAGE"
+    ],
+    [
+      36,
+      23,
+      0,
+      25,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 1,
+      "offset": [
+        -539.990766005061,
+        145.22354728415695
+      ]
+    },
+    "frontendVersion": "1.28.8"
+  },
+  "version": 0.4
+}

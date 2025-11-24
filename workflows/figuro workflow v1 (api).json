@@ -1,0 +1,133 @@
+{
+  "10": {
+    "inputs": {
+      "image": "Whisk_f2682fad74.jpg"
+    },
+    "class_type": "LoadImage",
+    "_meta": {
+      "title": "Load Image"
+    }
+  },
+  "11": {
+    "inputs": {
+      "rmbgmodel": [
+        "19",
+        0
+      ],
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "BRIA_RMBG_Zho",
+    "_meta": {
+      "title": "Background Remover"
+    }
+  },
+  "12": {
+    "inputs": {
+      "crop_padding_factor": 1,
+      "cascade_xml": "haarcascade_frontalface_default.xml",
+      "image": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "Image Crop Face",
+    "_meta": {
+      "title": "Image Crop Face"
+    }
+  },
+  "14": {
+    "inputs": {
+      "upscale_method": "nearest-exact",
+      "width": 1024,
+      "height": 0,
+      "crop": "disabled",
+      "image": [
+        "10",
+        0
+      ]
+    },
+    "class_type": "ImageScale",
+    "_meta": {
+      "title": "Upscale Image"
+    }
+  },
+  "19": {
+    "inputs": {},
+    "class_type": "BRIA_RMBG_ModelLoader_Zho",
+    "_meta": {
+      "title": "🧹BRIA_RMBG Model Loader"
+    }
+  },
+  "20": {
+    "inputs": {
+      "images": [
+        "11",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "22": {
+    "inputs": {
+      "rmbgmodel": [
+        "19",
+        0
+      ],
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "class_type": "BRIA_RMBG_Zho",
+    "_meta": {
+      "title": "Background Remover"
+    }
+  },
+  "23": {
+    "inputs": {
+      "prompt": " Generate a realistic 3D figurine version of the person exactly as in the photo, with lifelike materials and accurate textures. \n        Maintain realism, balanced proportions, and skin tone consistency. \n        No background, no base or stand.",
+      "api_key": "",
+      "model": "gpt-image-1",
+      "size": "1024x1536",
+      "quality": "low",
+      "image": [
+        "14",
+        0
+      ]
+    },
+    "class_type": "OpenAI Image API",
+    "_meta": {
+      "title": "OpenAI Image API with gpt-image-1"
+    }
+  },
+  "24": {
+    "inputs": {
+      "images": [
+        "22",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  },
+  "25": {
+    "inputs": {
+      "images": [
+        "23",
+        0
+      ]
+    },
+    "class_type": "PreviewImage",
+    "_meta": {
+      "title": "Preview Image"
+    }
+  }
+}
