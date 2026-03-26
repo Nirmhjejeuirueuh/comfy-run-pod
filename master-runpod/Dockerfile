@@ -1,5 +1,5 @@
 # Start from the official ComfyUI worker base
-FROM runpod/worker-comfyui:5.5.0-base
+FROM runpod/worker-comfyui:5.8.5-base
 
 # 1. Install ALL dependencies (Combined from both projects)
 RUN pip install --no-cache-dir \
