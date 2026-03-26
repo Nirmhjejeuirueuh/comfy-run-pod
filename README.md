@@ -24,7 +24,7 @@ A comprehensive ComfyUI Docker image with advanced AI models and custom nodes fo
 ### Pre-installed Models
 - **SeedVR2 Upscaler** (16GB) - High-quality video/image upscaling
 - **VXVI_LastFame_DMD2 Checkpoint** (6GB) - Advanced SDXL checkpoint
-
+`
 ## System Requirements
 
 - **Container Disk Space**: Minimum 60GB (recommended 80GB+)
