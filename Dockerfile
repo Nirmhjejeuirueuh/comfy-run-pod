@@ -21,11 +21,6 @@ RUN git clone https://github.com/pythongosssss/ComfyUI-Custom-Scripts /comfyui/c
 RUN git clone https://github.com/rgthree/rgthree-comfy /comfyui/custom_nodes/rgthree-comfy
 RUN git clone https://github.com/kijai/ComfyUI-KJNodes /comfyui/custom_nodes/ComfyUI-KJNodes
 
-# Special handling for ComfyUI-SeedVR2_VideoUpscaler (switch to nightly branch)
-RUN cd /comfyui/custom_nodes/ComfyUI-SeedVR2_VideoUpscaler && \
-    git fetch origin nightly && \
-    git checkout nightly
-
 # Install requirements for nodes that need them (conditional to avoid errors)
 RUN cd /comfyui/custom_nodes/ComfyUI-RndNanthu && \
     if [ -f requirements.txt ]; then pip install --no-cache-dir -r requirements.txt; fi
